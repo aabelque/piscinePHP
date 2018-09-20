@@ -1,0 +1,112 @@
+BODY {
+	background-color: black;
+}
+
+H1 {
+	color: lightgreen;
+	font-family: courier;
+	text-align: center;
+	font-size: 2vmin;
+}
+
+TABLE {
+	color: black;
+	font-family: serif;
+	margin: 0 auto;
+}
+
+.tab2 {
+	color: black;
+	font-family: serif;
+	margin: 10 auto;
+}
+
+TR, TD {
+	font-size: 1vmin;
+}
+
+TD {
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+
+.not_metal {
+	background-color: darkkhaki;
+}
+
+.alcalin {
+	background-color: white;
+}
+
+.alcalino_terr {
+	background-color: DarkSalmon;
+}
+
+.metaloid {
+	background-color: darkseagreen;
+}
+
+.rare_gas {
+	background-color: rosybrown;
+}
+
+.halogen {
+	background-color: cornflowerblue;
+}
+
+.poor_met {
+	background-color: grey;
+}
+
+.transition_met {
+	background-color: goldenrod;
+}
+
+.lantha {
+	background-color: lemonchiffon;
+}
+
+.actini {
+	background-color: peachpuff;
+}
+
+.uut {
+	background: repeating-linear-gradient(45deg, white, white 1px, grey 5px, grey 10px);
+}
+
+.uup {
+	background: repeating-linear-gradient(45deg, white, white 1px, grey 5px, grey 10px);
+}
+
+.uus {
+	background: repeating-linear-gradient(45deg, white, white 1px, cornflowerblue 5px, cornflowerblue 10px);
+}
+
+.uuo {
+	background: repeating-linear-gradient(45deg, white, white 1px, darksalmon 5px, darksalmon 10px);
+}
+
+.weight {
+	font-size: 1vmin;
+	text-align: right;
+}
+
+.num {
+	font-size: 1vmin;
+	text-align: left;
+}
+
+.hidden {
+	border: 0px;
+}
+
+.tab2 .hidden {
+	border: 0px;
+}
+
+#pic {
+	display: block;
+	margin: 0 auto;
+	width: 8%;
+}

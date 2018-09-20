@@ -1,0 +1,114 @@
+BODY {
+	background-color: #eee;
+	text-align: center;
+}
+
+H1 {
+	text-align: center;
+	border: 1px solid;
+	font-family: courier;
+	font-size: 3vmin;
+	color: #777;
+	box-shadow: 8px 8px 8px 0 #555;
+	border-radius: 10px;
+}
+
+H1 span {
+	font-size: 20px;
+}
+
+#menu A {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu > LI,
+#menu > LI LI {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	padding: 6px 15px;
+	background-color: #777;
+	background-image: linear-gradient(#aaa, #888 50%, #777 50%, #999);
+}
+
+#menu > LI LI {
+	background: transparent none;
+}
+
+#menu > LI LI A {
+	color: #444;
+}
+
+#menu > LI LI:hover {
+	background: #eee;
+}
+
+#menu > LI:first-child {
+	border-right: 1px solid #777;
+	border-radius: 8px 0 0 8px;
+}
+
+#menu > LI + LI {
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #777;
+}
+
+#menu > LI:last-child {
+	border-right: 0;
+	border-left: 1px solid #aaa;
+	border-radius: 0 8px 8px 0;
+}
+
+#menu > LI:hover {
+	background-color: #999;
+	background-image: linear-gradient(#ccc, #aaa 50%, #999 50%, #bbb);
+}
+
+#menu UL.niv2 {
+	position: absolute;
+	text-align: left;
+	top: 2em; left: 0;
+	max-height: 0em;
+	margin: 0; padding: 0;
+	background-color: #ddd;
+	background-image: linear-gradient(#fff, #ddd);
+	overflow: hidden;
+	transition: 0.5s max-height 0.3s;
+	border-radius: 0 0 8px 8px;
+}
+
+#menu UL.niv3 {
+	top: 2em; left: 0;
+	max-height: 0em;
+	margin: 0; padding: 0;
+	background-color: #ddd;
+	background-image: linear-gradient(#fff, #ddd);
+	overflow: hidden;
+	transition: 0.5s max-height 0.3s;
+	border-radius: 0 0 8px 8px;
+}
+
+#menu UL.niv4 {
+	top: 2em; left: 0;
+	max-height: 0em;
+	margin: 0; padding: 0;
+	background-color: #ddd;
+	background-image: linear-gradient(#fff, #ddd);
+	overflow: hidden;
+	transition: 0.5s max-height 0.3s;
+	border-radius: 0 0 8px 8px;
+}
+
+#menu > LI:hover UL.niv2 {
+	max-height: 20em;
+}
+
+#menu > LI LI:hover UL.niv3 {
+	max-height: 20em;
+}
+
+#menu > LI LI LI:hover UL.niv4 {
+	max-height: 20em;
+}
