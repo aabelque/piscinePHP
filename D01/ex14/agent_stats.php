@@ -34,10 +34,51 @@ else if ($argv[1] == "moyenne_user")
 		foreach ($user as $elem)
 		{
 			$note = explode(";", $elem);
+			if ($note[1] != NULL && $note[2] != "moulinette")
+			{
+				$sum_us += $note[1];
+				$i++;
+			}
+		}
+		if ($i != 0)
+		{
+			$moy = $sum_us / $i;
+			echo $note[0].":".$moy."\n";
 		}
 	}
-	print_r($note[0]);
-	print_r($res[adam_e][1]);
-	//echo $tab[1];
 }
+else if ($argv[1] == "ecart_moulinette")
+{
+	sort($tab);
+	foreach ($tab as $key => $value)
+	{
+		$tmp = explode(";", $value);
+		$res[$tmp[0]][$key] = $value;
+	}
+	foreach ($res as $user)
+	{
+		$i = 0;
+		$sum_us = 0;
+		$moy = 0;
+		$moul = 0;
+		foreach ($user as $elem)
+		{
+			$note = explode(";", $elem);
+			if ($note[1] != NULL && $note[2] != "moulinette")
+			{
+				$sum_us += $note[1];
+				$i++;
+			}
+			if ($note[2] == "moulinette")
+				$moul = $note[1];
+		}
+		if ($i != 0)
+		{
+			$moy = $sum_us / $i;
+			echo $note[0].":".($moy - $moul)."\n";
+		}
+	}
+}
+else
+	return ;
 ?>
