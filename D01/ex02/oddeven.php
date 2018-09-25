@@ -21,4 +21,5 @@ while (!feof($stdin))
 			echo "Le chiffre $nb est Impair\n";
 	}
 }
+fclose($stdin);
 ?>
