@@ -1,18 +1,18 @@
 <?php
 
-if (isset($_GET['action']) && $_GET['action'] == 'set')
+if ($_GET['action'] != NULL && $_GET['action'] == 'set')
 {
-	if (isset($_GET['name']) && isset($_GET['value']))
-		setcookie($_GET['name'], $_GET['value']);
+	if ($_GET['name'] != NULL  && $_GET['value'] != NULL)
+		setcookie($_GET['name'], $_GET['value'], time()+300);
 }
-else if (isset($_GET['action']) && $_GET['action'] == 'get')
+else if ($_GET['action'] != NULL && $_GET['action'] == 'get')
 {
-	if (isset($_GET['name']))
+	if ($_GET['name'])
 		echo $_COOKIE[$_GET['name']]."\n";
 }
-else if (isset($_GET['action']) && $_GET['action'] == 'del')
+else if ($_GET['action'] != NULL && $_GET['action'] == 'del')
 {
-	if (isset($_GET['name']))
+	if ($_GET['name'])
 		setcookie($_GET['name']);
 }
 
