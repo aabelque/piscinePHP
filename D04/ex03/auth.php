@@ -5,13 +5,10 @@ function	auth($login, $passwd)
 	$path = "../htdocs/private/";
 	$file = $path."passwd";
 
-	if (!file_exists($file))
-		echo "File not found\n";
-	
 	$unser = unserialize(file_get_contents($file));
 	$hash = hash('Whirlpool', $passwd);
-
-	foreach ($unser as $login=>$value)
+    
+	foreach ($unser as $key=>$value)
 	{
 		if ($value['login'] == $login)
 		{
