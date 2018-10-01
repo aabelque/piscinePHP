@@ -44,10 +44,9 @@ if ($index == 1)
 {
 	$ser = serialize($unser);
 	file_put_contents($file, $ser);
-	echo "OK\n";
     header("Location: index.html");
+	echo "OK\n";
 }
 else
 	echo "ERROR\n";
-
 ?>
