@@ -12,7 +12,7 @@ function	get_data()
 	else
 	{
 		echo "ERROR\n";
-		return ;
+		exit();
 	}
 	return ($arr);
 }

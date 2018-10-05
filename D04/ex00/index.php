@@ -10,9 +10,9 @@ if ($_GET['login'] != NULL && $_GET['passwd'] != NULL
 
 <HTML><BODY>
 <FORM ACTION="index.php" METHOD="get">
-	Identifiant: <INPUT TYPE="text" NAME="login" VALUE="<?PHP echo $_SESSION['login']; ?>" />
+	Identifiant: <INPUT TYPE="text" NAME="login" VALUE="<?=$_SESSION['login']; ?>" />
 	<BR />
-	Mot de passe: <INPUT TYPE="password" NAME="passwd" VALUE="<?PHP echo $_SESSION['passwd']; ?>" />
+	Mot de passe: <INPUT TYPE="password" NAME="passwd" VALUE="<?=$_SESSION['passwd']; ?>" />
 	<INPUT TYPE="submit" NAME="submit" VALUE="OK" />
 </FORM>
 </BODY></HTML>

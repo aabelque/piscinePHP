@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 $user = get_current_user();
-$file = fopen("/var/run/utmpx", "rb");
+$file = fopen("/var/run/utmpx", "r");
 fseek($file, 1256);
 date_default_timezone_set("Europe/Paris");
 while (!feof($file))
