@@ -1,0 +1,44 @@
+#admincol{
+	display: flex;
+	background-color:#f1f1f1!important;
+}
+#admincol a{
+	font-size: 18px;
+	margin-top: 20px;
+	padding: 10px;
+}
+#admincont{
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+
+}
+#admincont a:hover{
+	background-color: black
+	color: white;
+}
+a:hover{
+	background-color: black
+	color: white;
+}
+
+form{
+	width: 90%;
+	display: flex;
+}
+.row{
+	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+}
+label{
+	margin: auto;
+}
+.commande{
+	border-color: #6c757d !important;
+  border: 1px solid transparent;
+  
+}
+.auteur{
+	margin: auto;
+}

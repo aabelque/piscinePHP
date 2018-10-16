@@ -1,0 +1,34 @@
+.article-row{
+	display: flex;
+	flex-direction: row;
+	border: 1px solid rgba(0,0,0,.125);
+}
+#cpanier{
+	flex-direction: column;
+	display: flex;
+}
+
+#total{
+	border: 1px solid rgba(0,0,0,.125);
+	padding: 10px;	
+}
+#subcommand{
+	margin: auto;
+    width: 100%;
+    height: 80px;
+}
+#commandform{
+	margin: auto;
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+}
+
+#delme{
+	margin-top: 140px;
+}
+#delme button{
+	padding: 30px;
+}
