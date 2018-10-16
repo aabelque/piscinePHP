@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Balloon</TITLE>
+		<STYLE>
+#ballon {
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border-radius: 1000px;
+}
+		</STYLE>
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	</HEAD>
+	<BODY>
+		<DIV id="ballon">
+		</DIV>
+		<SCRIPT>
+			var id = 0;
+			var color = new Array('red', 'green', 'blue');
+			$(document).ready(function() {
+				$('#ballon').click(function() {
+					id++;
+					if (id > 2)
+						id = 0;
+					$('#ballon').css("width", $('#ballon').width() + 10);
+					$('#ballon').css("height", $('#ballon').height() + 10);
+					$('#ballon').css("background-color", color[id]);
+					if ($('#ballon').width() > 420 && $('#ballon').height() > 420) {
+						$('#ballon').width(200);
+						$('#ballon').height(200);
+					}
+				})
+				$('#ballon').mouseout(function() {
+						id--;
+						if (id == -1)
+							id = 2;
+						if ($('#ballon').width() == 200 && $('#ballon').height() == 200) {
+							$('#ballon').width(200);
+							$('#ballon').height(200);
+							$('#ballon').css("background-color", color[id]);
+						}
+						else {
+							$('#ballon').css("width", $('#ballon').width() - 5);
+							$('#ballon').css("height", $('#ballon').height() - 5);
+							$('#ballon').css("background-color", color[id]);
+						}
+				})
+			})
+		</SCRIPT>
+	</BODY>
+</HTML>

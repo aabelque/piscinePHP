@@ -1,0 +1,12 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles a vertex.
+
+An instance can be contructed from either a vertex value:
+new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0, 'w' => 1.0, 'color' => new Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) ) ) );
+
+Or from distinct red, green, blue constitutives:
+new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 ) );
+
+Any other use is undefined behaviour.
+
+---------------------------------------------------------------------- Vertex ->

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Balloon</TITLE>
+		<STYLE>
+#ballon {
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border-radius: 1000px;
+}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<DIV id="ballon" onclick= "increase();" onmouseout="decrease();">
+		</DIV>
+		<SCRIPT>
+			var balloon = document.getElementById('ballon');
+			var id = 0;
+			var color = new Array('red', 'green', 'blue');
+			function increase() {
+				id++;
+				if (id > 2)
+					id = 0;
+				balloon.style.width = balloon.offsetWidth + 10 + 'px';
+				balloon.style.height = balloon.offsetHeight + 10 + 'px';
+				balloon.style.backgroundColor = color[id];
+				if (balloon.offsetWidth > 420 && balloon.offsetHeight > 420) {
+					balloon.style.width = 200 + 'px';
+					balloon.style.height = 200 + 'px';
+				}
+			}
+			function decrease() {
+				id--;
+				if (id == -1)
+					id = 2;
+				if (balloon.offsetWidth == 200 && balloon.offsetHeight == 200) {
+					balloon.style.width = 200 + 'px';
+					balloon.style.height = 200 + 'px';
+					balloon.style.backgroundColor = color[id];
+				}
+				else {
+					balloon.style.width = balloon.offsetWidth - 5 + 'px';
+					balloon.style.height = balloon.offsetHeight - 5 + 'px';
+					balloon.style.backgroundColor = color[id];
+				}
+			}
+		</SCRIPT>
+	</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Calc</TITLE>
+	</HEAD>
+	<BODY>
+		<INPUT id="right" TYPE="text" />
+		<SELECT id ="select">
+			<OPTION VALUE="+">+</OPTION>
+			<OPTION VALUE="-">-</OPTION>
+			<OPTION VALUE="*">*</OPTION>
+			<OPTION VALUE="/">/</OPTION>
+			<OPTION VALUE="%">%</OPTION>
+		</SELECT>
+		<INPUT id="left" TYPE="text" />
+		<INPUT TYPE="submit" VALUE="Try me!" onclick="calc();" />
+		<SCRIPT>
+		function calc() {
+			var nb1 = document.getElementById("right").value;	
+			var nb2 = document.getElementById("left").value;	
+			var select = document.getElementById("select");
+			var opt = select.options[select.selectedIndex].value;
+			var result;
+			if (!Number.isInteger(Number(nb1)) || !Number.isInteger(Number(nb2)) || Number(nb1) < 0 || Number(nb2) < 0) {
+				console.log("Error :(");
+				alert("Error :(");
+			}
+			else {
+				if (opt == "+")
+					result = Number(nb1) + Number(nb2);
+				else if (opt == "-")
+					result = Number(nb1) - Number(nb2);
+				else if (opt == "*")
+					result = Number(nb1) * Number(nb2);
+				else if (opt == "/") {
+					if (Number(nb2) == 0)
+						result = "It's over 9000!";
+					else
+						result = Number(nb1) / Number(nb2);
+				}
+				else if (opt == "%") {
+					if (Number(nb2) == 0)
+						result = "It's over 9000!";
+					else
+						result = Number(nb1) % Number(nb2);
+				}
+				else
+					result = "Invalid Operator !";
+				console.log(result);
+				alert(result);
+			}
+		}
+		setInterval(function() { alert("Please use me..."); }, 30000);
+		</SCRIPT>
+	</BODY>
+</HTML>

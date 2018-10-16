@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Calc</TITLE>
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	</HEAD>
+	<BODY>
+		<INPUT id="right" TYPE="text" />
+		<SELECT id ="select">
+			<OPTION VALUE="+">+</OPTION>
+			<OPTION VALUE="-">-</OPTION>
+			<OPTION VALUE="*">*</OPTION>
+			<OPTION VALUE="/">/</OPTION>
+			<OPTION VALUE="%">%</OPTION>
+		</SELECT>
+		<INPUT id="left" TYPE="text" />
+		<INPUT id="submit" TYPE="submit" VALUE="Try me!" />
+		<SCRIPT>
+		$(document).ready(function() {
+			$('#submit').click(function() {
+				var nb1 = $('#right').val();	
+				var nb2 = $('#left').val();	
+				var opt = $('#select').val();
+				var result;
+				if (!Number.isInteger(Number(nb1)) || !Number.isInteger(Number(nb2)) || Number(nb1) < 0 || Number(nb2) < 0) {
+					console.log("Error :(");
+					alert("Error :(");
+				}
+				else {
+					if (opt == "+")
+						result = Number(nb1) + Number(nb2);
+					else if (opt == "-")
+						result = Number(nb1) - Number(nb2);
+					else if (opt == "*")
+						result = Number(nb1) * Number(nb2);
+					else if (opt == "/") {
+						if (Number(nb2) == 0)
+							result = "It's over 9000!";
+						else
+							result = Number(nb1) / Number(nb2);
+					}
+					else if (opt == "%") {
+						if (Number(nb2) == 0)
+							result = "It's over 9000!";
+						else
+							result = Number(nb1) % Number(nb2);
+					}
+					else
+						result = "Invalid Operator !";
+					console.log(result);
+					alert(result);
+				}
+			})
+		})
+		//setInterval(function() { alert("Please use me..."); }, 30000);
+		</SCRIPT>
+	</BODY>
+</HTML>
